@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "cross-env NODE_ENV=prod dist/index.js",
-    "start:dev": "cross-env NODE_ENV=dev PORT=3400 node --watch --env-file=.env dist/index.js",
-    "start:mon": "cross-env  NODE_ENV=dev PORT=3400 nodemon dist/index.js",
+    "start:dev": "cross-env DEBUG=W6E* NODE_ENV=dev PORT=3400 node --watch --env-file=.env dist/index.js",
+    "start:mon": "cross-env DEBUG=W6E* NODE_ENV=dev PORT=3400 nodemon dist/index.js",
     "build": "tsc",
     "dev": "tsc -w",
     "test": "cross-env NODE_ENV=test jest",
@@ -20,7 +20,11 @@
     "singleQuote": true
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/debug": "^4.1.12",
+    "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
+    "@types/morgan": "^1.9.9",
     "@types/node": "^20.12.7",
     "@typescript-eslint/eslint-plugin": "^7.6.0",
     "@typescript-eslint/parser": "^7.6.0",
@@ -34,8 +38,12 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "cross-env": "^7.0.3",
+    "debug": "^4.3.4",
     "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
     "nodemon": "^3.1.0"
   }
 }

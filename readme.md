@@ -25,14 +25,17 @@
 
 - [Express.js](https://expressjs.com/). Conceptos básicos. Middlewares.
 - Instalación
-- Incorporación en un servidor HTTP. Alternativas
+- Incorporación en un servidor HTTP. Alternativa (sólo express)
 - Rutas básicas. Pruebas desde [Postman](https://www.postman.com/).
+
 - Configuración adicional: middleware
   - [Morgan](https://www.npmjs.com/package/morgan)
   - [Helmet](https://www.npmjs.com/package/helmet) o
   - [Cors](https://www.npmjs.com/package/cors)
   - Middleware nativo: `app.use(express.json())`
   - Middleware personalizado
+  - static
+  
 - Arquitectura en capas
   - models (entities)
   - routers
