@@ -5,20 +5,20 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: ['xo'],
+  extends: ['xo', 'prettier'],
   overrides: [
     {
       extends: ['xo-typescript', 'prettier'],
       files: ['*.ts', '*.tsx'],
     },
   ],
-  //parser: '@typescript-eslint/parser',
+  // Alt parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
     tsconfigRootDir: __dirname,
     project: '/tsconfig.json',
   },
-  // plugins: ['@typescript-eslint'],
+  // Alt plugins: ['@typescript-eslint'],
   rules: {},
 };
